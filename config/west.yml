@@ -2,10 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: armastardo # You can name this whatever you like; just make sure the "remote" below matches.
+      url-base: https://github.com/Armastardo
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: bault-zmk-config
+      remote: armastardo
+      revision: main # This is the name of the branch you want to use.
   self:
     path: config
